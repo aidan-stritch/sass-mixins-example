@@ -1,0 +1,48 @@
+
+/*create variable ($class-name) and assign value of "item"*/
+$class-name: item;
+
+/*create a for loop that cycles for 4 iterations and creates a css class each time*/
+@for $i from 1 through 4{
+    .#{$class-name}-#{$i} {
+        width: 60px + $i;
+    }
+} 
+
+
+/*create variable ($random) and assign value of "5"
+$random: 5;
+*/
+/*create a h1 and use an if else directive to decide which color the h1 will be
+h1 {
+    @if $random < 5 {
+        color: blue;
+    } @else if $random == 3{
+        color: purple;
+    } @else {
+        color:orange;
+    }
+}
+*/
+
+/*another example of control flow*/
+/*create a h1 and use an if statement  */
+
+h1 {
+    @if 1 + 1 == 2 {
+        border: 1px solid black;
+    }
+}
+
+/*create a mixin called button as an example*/
+
+@mixin button ($color, $size){
+    width:$size;
+    height: $size/2;
+    color:$color;
+    border: 1px solid $color;
+}
+
+.btn {
+    @include button(#e84610, 200px);
+}
